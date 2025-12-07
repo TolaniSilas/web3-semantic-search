@@ -39,10 +39,14 @@ client = chromadb.PersistentClient(path=CHROMA_DIR)
 COLLECTION_NAME = "semantic-contents"
 
 # ensure collection exists.
-if COLLECTION_NAME not in client.list_collections():
+try:
+    # try to get the existing collection.
+    collection = client.get_collection(name=COLLECTION_NAME)
+    print(f"Collection {COLLECTION_NAME} retrieved successfully.")
+except Exception:
+    # if the collection doesn't exist, create it.
     collection = client.create_collection(name=COLLECTION_NAME)
-else:
-    collection = client.get_collection(COLLECTION_NAME)
+    print(f"Collection {COLLECTION_NAME} created successfully.")
 
 
 # load the environment variables from the .env file.
