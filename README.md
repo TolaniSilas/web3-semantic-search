@@ -9,6 +9,7 @@ This project stands to promote a world of **decentralization** and **ownership o
 ---
 
 ## Tech Stack
+<div align="left">
 
 | Layer | Technology |
 |-------|------------|
@@ -17,6 +18,8 @@ This project stands to promote a world of **decentralization** and **ownership o
 | **AI: LLM & VLM** | [Groq](https://groq.com/) - Llama 3.1 8B (text), Llama 4 Scout 17B (vision) |
 | **Image handling** | [Pillow](https://pillow.readthedocs.io/) (PIL) |
 | **Config** | [python-dotenv](https://pypi.org/project/python-dotenv/) for environment variables |
+
+</div>
 
 ---
 
@@ -75,12 +78,15 @@ This project stands to promote a world of **decentralization** and **ownership o
 
 ## API Endpoints
 
+<div align="left">
 | Method | Endpoint | Description |
 |--------|----------|-------------|
 | `GET` | `/health` | Service health check |
 | `POST` | `/analyze` | Analyze image or text before minting; returns enhanced description and tags |
 | `POST` | `/index` | Store metadata in ChromaDB after minting (by `token_id`) |
 | `POST` | `/search` | Natural-language search; returns matching token IDs and metadata |
+
+<div>
 
 ---
 
