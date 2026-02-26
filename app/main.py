@@ -82,6 +82,7 @@ async def analyze(
         raise HTTPException(status_code=400, 
             detail="Cannot submit both a file and typed text content. Please choose one source."
         )
+
     if not has_file and not has_text:
         raise HTTPException(status_code=400, 
             detail="Must provide either an image file or textual content. Use the file upload for images and text field for blog content")
@@ -131,6 +132,7 @@ async def analyze(
         generated_tags = tag_extractor.generate_tags(ai_description, tag_extractor.token_class["short"])
 
         enhanced = ""
+
         if userDescription:
             enhanced += userDescription.strip() + " "
         enhanced += ai_description.strip()
@@ -163,6 +165,7 @@ async def analyze(
 
         # generate an enhanced description.
         enhanced = ""
+        
         if userDescription:
             enhanced += userDescription.strip() + " "
         enhanced += ai_description.strip()
