@@ -78,15 +78,12 @@ This project stands to promote a world of **decentralization** and **ownership o
 
 ## API Endpoints
 
-<div align="left">
 | Method | Endpoint | Description |
 |--------|----------|-------------|
 | `GET` | `/health` | Service health check |
 | `POST` | `/analyze` | Analyze image or text before minting; returns enhanced description and tags |
 | `POST` | `/index` | Store metadata in ChromaDB after minting (by `token_id`) |
 | `POST` | `/search` | Natural-language search; returns matching token IDs and metadata |
-
-<div>
 
 ---
 
